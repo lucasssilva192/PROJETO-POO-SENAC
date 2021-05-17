@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: 24-Abr-2019 às 04:15
+- Versão do servidor: 10.1.37-MariaDB
+- versão do PHP: 7.3.1
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="pessoa_fisica" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="tbl_cpf">
+                CREATE TABLE `tbl_cpf` (
+                  `cpf` varchar(11) NOT NULL,
+                  `nome` varchar(70) NOT NULL,
+                  `endereco` varchar(70) NOT NULL,
+                  `telefone_celular` varchar(11) NOT NULL,
+                  PRIMARY KEY (`cpf`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'pessoa_fisica'
+    -->
+    <database name="pessoa_fisica">
+        <!-- Tabela tbl_cpf -->
+    </database>
+</pma_xml_export>

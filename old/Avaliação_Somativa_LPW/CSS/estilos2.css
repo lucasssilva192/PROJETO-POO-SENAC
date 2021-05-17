@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#background{
+    width: 100%;
+    height: 100%;
+    background-color: #7b91c5;
+}
+
+#bloco_branco{
+    width: 400px;
+    height: auto;
+    background-color: white;
+    position: relative; 
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+.botao_bloco{
+    width: 180px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #d7deed;
+    border-radius: 10px;
+    border: 2px solid #d7deed;
+}
+
+.botao_bloco:hover{
+    cursor: pointer;
+    background-color: #234388; 
+}
+
+.input_bloco{
+    width: 250px;
+    height: 30px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #d3d3d3;
+}
+
+.botao_bloco:hover p{
+    color: white;
+}
+ 
