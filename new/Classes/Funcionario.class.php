@@ -1,5 +1,7 @@
 <?php
 require(__DIR__ . '/../Interfaces/funcionario.interface.php');
+require(__DIR__ . '/../Interfaces/validacao.interface.php');
+require_once(__DIR__ . '/../Classes/Validacao.class.php');
 require_once(__DIR__ . '/Abstratas/TipoFuncionario.class.php');
 
 Class Funcionario extends TipoFuncionario implements iFuncionario{
@@ -65,6 +67,9 @@ Class Funcionario extends TipoFuncionario implements iFuncionario{
        return false;
     }
 
+
+    //ANTES DO PADRÃO OPEN CLOSED 
+    /* 
     public function validarcep(){
         if(strlen($this->cep) != 8){
             return false;
@@ -72,7 +77,6 @@ Class Funcionario extends TipoFuncionario implements iFuncionario{
             return true;
         }
     }
-
     public function validarcpf(){
         if(strlen($this->cpf) != 11){
             return false;
@@ -80,7 +84,12 @@ Class Funcionario extends TipoFuncionario implements iFuncionario{
             return true;
         }
     }
+    */
 
+    //SEGUINDO PADRÃO OPEN CLOSED
+    
+
+    //public function validarCpf extends validar
 
     public function inserir(){
         //SEGUINDO CONCEITO DE RESPONSABILIDADE UNICA, ANTES O QUE ERA VALIDADO NA FUNÇÃO INSERIR, TEM SUAS PROPRIAS FUNCOES
