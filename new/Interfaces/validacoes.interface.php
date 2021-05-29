@@ -2,7 +2,6 @@
 
 interface iValidacoes{
     public function setDados(array $dados);
-    public function setDado();
-    public function setParametro();
-    public function calcular();
+    public function setParametro(int $parametro);
+    public function valida();
 }
