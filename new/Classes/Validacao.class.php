@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/../Interfaces/validacoes.interface.php');
+require_once(__DIR__ . '/../Interfaces/validacoesStrings.interface.php');
 
 abstract class Validacao{    
     protected $dados;
@@ -11,6 +12,17 @@ abstract class Validacao{
     }
 
     public function setParametro(int $parametro){
+    }
+
+    public function valida(){
+    }
+}
+
+abstract class ValidacaoString{
+    protected $dados;
+    protected $dado;
+
+    public function setDados(array $dados){
     }
 
     public function valida(){
@@ -75,4 +87,24 @@ Class ValidaCep extends Validacao implements iValidacoes{
 
 }
 
+Class ValidaNome extends ValidacaoString implements iValidacoesStrings{
+    protected $dado;
 
+    public function setDados(array $dados):bool{
+        if($this->dado = $dados['nome'] ?? null){
+            return true;
+        } else {
+            return false;
+        }
+        parent::setDados($this->dado);
+    }
+
+    public function valida(): bool{
+        if ( strstr($this->dado, ' ')){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+}
